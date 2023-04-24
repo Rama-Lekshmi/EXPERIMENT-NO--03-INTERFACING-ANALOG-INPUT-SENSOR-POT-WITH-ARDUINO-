@@ -1,4 +1,4 @@
-# EXPERIMENT-NO--03-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-
+# EXPERIMENT-NO--02-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-
 
 
 
@@ -67,7 +67,27 @@ CIRCUIT DIAGRAM
 
 
 **PROGRAM** 
- 
+```
+int potPin = A5;
+int ledPin = 2;
+void setup()
+{
+ pinMode(potPin,INPUT);
+ pinMode(ledPin, OUTPUT);
+ Serial.begin(9600);
+}
+
+void loop()
+{
+ int PotMeasure = analogRead(A5);
+ if(PotMeasure>=450)
+ {
+ digitalWrite(2, HIGH);
+ }
+ else
+ digitalWrite(2, LOW);
+}
+ ```
 
 
 
@@ -83,6 +103,8 @@ CIRCUIT DIAGRAM
 
 
 [My image](username.github.com/repository/img/image.jpg)
+![Screenshot 2023-04-24 at 17-45-13 Amazing Turing Tinkercad](https:![Screenshot 2023-04-24 at 17-43-36 Copy of Mighty Bombul-Amur Tinkercad](https://user-images.githubusercontent.com/118541549/234004481-ea52e171-c444-4496-97ff-090af2b7c517.png)
+//user-images.githubusercontent.com/118541549/234004421-9ff75ee3-8ca3-4649-9bd7-8235057fd33d.png)
 
 
 
